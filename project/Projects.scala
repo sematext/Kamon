@@ -201,7 +201,7 @@ object Projects extends Build {
     .settings(formatSettings: _*)
     .settings(
       libraryDependencies ++=
-        compile(sprayCan, sprayClient, sprayRouting, sprayJson, sprayJsonLenses, newrelic, akkaSlf4j) ++
+        compile(sprayCan, sprayClient, sprayRouting, sprayJson, sprayJsonLenses, newrelic, akkaSlf4j, scroogeCore, libThrift) ++
         test(scalatest, akkaTestKit, slf4Api, slf4nop))
 
   val noPublishing = Seq(publish := (), publishLocal := (), publishArtifact := false)

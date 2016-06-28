@@ -19,7 +19,8 @@ object Dependencies {
 
   val resolutionRepos = Seq(
     "spray repo" at "http://repo.spray.io/",
-    "typesafe repo" at "http://repo.typesafe.com/typesafe/releases/"
+    "typesafe repo" at "http://repo.typesafe.com/typesafe/releases/",
+    "twitter-repo" at "https://maven.twttr.com/thrift"
   )
 
   val sprayVersion      = "1.3.2"
@@ -56,6 +57,8 @@ object Dependencies {
   val sigarLoader       = "io.kamon"                  %   "sigar-loader"          % "1.6.6"
   val h2                = "com.h2database"            %   "h2"                    % "1.4.182"
   val el                = "org.glassfish"             %   "javax.el"              % "3.0.0"
+  val scroogeCore       = "com.twitter"               %%  "scrooge-core"          % "3.20.0"
+  val libThrift         = "org.apache.thrift"         %   "libthrift"             % "0.9.2"
 
   def compile   (deps: ModuleID*): Seq[ModuleID] = deps map (_ % "compile")
   def provided  (deps: ModuleID*): Seq[ModuleID] = deps map (_ % "provided")
